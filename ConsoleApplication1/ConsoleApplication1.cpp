@@ -1,11 +1,22 @@
 // ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+#pragma warning(disable:4996)
 
 #include "KW.h"
+
+
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
+int getRandomInt(int iMax)
+{
+    int i;
+    i = rand() % iMax;
+
+    return i;
+
+}
 
 int getInt() 
 {
@@ -49,11 +60,15 @@ int main()
     char szName[100];
     char* pszName;
     int iMyNum;
+    int iRandom = 5;
 
     iMyNum = getInt();
+    // iRandom = getRandomInt(10);
     pszName = getString(szName);
 
     printf("\n\nMy Name is %s!\n\n", pszName);
+
+    printf("\n\nMy random number was %d", iRandom);
 
 
 
