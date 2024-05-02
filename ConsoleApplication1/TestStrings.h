@@ -1,3 +1,3 @@
 #pragma once
 
-void testStrings1(void);
+void testStrings();

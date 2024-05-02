@@ -1,59 +1,16 @@
 // ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+#define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:4996)
+
 
 #include "KW.h"
 #include "TestStrings.h"
-
-
+#include "TestIO.h"
+#include "TestModule.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
-int getRandomInt()
-{
-    int i = 5;
-    i = rand();
-
-    return i;
-
-}
-
-int getInt() 
-{
-
-    int iMyNum;
-    int iResult;
-
-    // Ask the user to type a number
-    printf("\nType a number: ");
-
-    // Get and save the number the user types
-    iResult = scanf("%d", &iMyNum);
-
-    // Output the number the user typed
-    printf("Your number is: %d", iMyNum);
-
-    return iMyNum;
-
-}
-
-char* getString(char *pszString)
-{
-    char szString[100];
-
-    printf("\nType your full name: ");
-
-    scanf("%s", &szString);
-
-    printf("\nHello %s\n", szString);
-
-    strcpy(pszString, szString);
-
-
-    return pszString;
-}
-
 
 
 int main()
@@ -64,6 +21,8 @@ int main()
     int iMyNum;
     int iRandom = 5;
 
+    testModule();
+
     iMyNum = getInt();
     // iRandom = getRandomInt(10);
     pszName = getString(szName);
@@ -72,6 +31,7 @@ int main()
 
     printf("\n\nMy random number was %d", iRandom);
 
+    // testStrings1();
 
 
 }
