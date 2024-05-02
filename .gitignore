@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/ConsoleApplication1.sln
+/.gitignore
+/ConsoleApplication1/ConsoleApplication1.vcxproj
+/ConsoleApplication1/ConsoleApplication1.vcxproj.filters
