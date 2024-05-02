@@ -3,6 +3,7 @@
 #pragma warning(disable:4996)
 
 #include "KW.h"
+#include "TestStrings.h"
 
 
 #include <stdio.h>
@@ -22,12 +23,13 @@ int getInt()
 {
 
     int iMyNum;
+    int iResult;
 
     // Ask the user to type a number
     printf("\nType a number: ");
 
     // Get and save the number the user types
-    scanf("%d", &iMyNum);
+    iResult = scanf("%d", &iMyNum);
 
     // Output the number the user typed
     printf("Your number is: %d", iMyNum);
