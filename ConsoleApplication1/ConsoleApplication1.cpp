@@ -9,10 +9,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-int getRandomInt(int iMax)
+int getRandomInt()
 {
-    int i;
-    i = rand() % iMax;
+    int i = 5;
+    i = rand();
 
     return i;
 
