@@ -3,38 +3,40 @@
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:4996)
 
+extern "C" {
+    #include "KW.h"
+    #include "TestIO.h"
+    #include "TestModule.h"
+}
 
-#include "KW.h"
-#include "TestStrings.h"
-#include "TestIO.h"
-#include "TestModule.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
+extern "C" {
+    int main()
+    {
 
-int main()
-{
+        char szName[100];
+        char* pszName;
+        int iMyNum;
+        int iRandom = 5;
 
-    char szName[100];
-    char* pszName;
-    int iMyNum;
-    int iRandom = 5;
+        testModule();
 
-    testModule();
+        iMyNum = getInt();
+        // iRandom = getRandomInt(10);
+        pszName = getString(szName);
 
-    iMyNum = getInt();
-    // iRandom = getRandomInt(10);
-    pszName = getString(szName);
+        printf("\n\nMy Name is %s!\n\n", pszName);
 
-    printf("\n\nMy Name is %s!\n\n", pszName);
+        printf("\n\nMy random number was %d", iRandom);
 
-    printf("\n\nMy random number was %d", iRandom);
+        return 0;
 
-    // testStrings1();
-
-
+    }
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

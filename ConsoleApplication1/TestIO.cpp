@@ -2,46 +2,53 @@
 #include <stdlib.h>
 #include <string.h>
 
-int getRandomInt()
-{
-    int i = 5;
-    i = rand();
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:4996)
 
-    return i;
+extern "C" {
 
-}
+    int getRandomInt()
+    {
+        int i = 5;
+        i = rand();
 
-int getInt()
-{
+        return i;
 
-    int iMyNum;
-    int iResult;
+    }
 
-    // Ask the user to type a number
-    printf("\nType a number: ");
+    int getInt()
+    {
 
-    // Get and save the number the user types
-    iResult = scanf("%d", &iMyNum);
+        int iMyNum;
+        int iResult;
 
-    // Output the number the user typed
-    printf("Your number is: %d", iMyNum);
+        // Ask the user to type a number
+        printf("\nType a number: ");
 
-    return iMyNum;
+        // Get and save the number the user types
+        iResult = scanf("%d", &iMyNum);
 
-}
+        // Output the number the user typed
+        printf("Your number is: %d", iMyNum);
 
-char* getString(char* pszString)
-{
-    char szString[100];
+        return iMyNum;
 
-    printf("\nType your full name: ");
+    }
 
-    scanf("%s", &szString);
+    char* getString(char* pszString)
+    {
+        char szString[100];
 
-    printf("\nHello %s\n", szString);
+        printf("\nType your full name: ");
 
-    strcpy(pszString, szString);
+        scanf("%s", &szString);
+
+        printf("\nHello %s\n", szString);
+
+        strcpy(pszString, szString);
 
 
-    return pszString;
+        return pszString;
+    }
+
 }

@@ -3,15 +3,17 @@
 #include <stdio.h>
 
 
-void testStrings()
-{
+extern "C" {
+	void testStrings1()
+	{
 
-	char szName[] = "Keith Woolterton";
+		char szName[] = "Keith Woolterton";
 
-	printf("\n\n### Test Strings 1 ###");
-	printf("\nMy name is %s.", szName);
+		printf("\n\n### Test Strings 1 ###");
+		printf("\nMy name is %s.", szName);
 
-	return;
+		return;
 
+	}
 }
 
